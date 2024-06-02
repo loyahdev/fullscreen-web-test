@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll to Fullscreen Button</title>
+    <title>ClassiCube on Apple Watch</title>
     <style>
         body, html {
             margin: 0;
@@ -12,39 +12,29 @@
             background-color: #333;
             color: white;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
         #spacer {
-            height: 180vh; /* Spacer to push the button further down */
+            height: 180vh; /* Spacer to push the iframe further down */
         }
-        #fullscreen-btn {
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
+        #game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+        iframe {
+            width: 320px; /* Adjust based on the desired width */
+            height: 180px; /* Adjust based on the desired height */
             border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div id="spacer"></div>
-    <button id="fullscreen-btn">Go Fullscreen</button>
-
-    <script>
-        document.getElementById('fullscreen-btn').addEventListener('click', function() {
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            } else if (document.documentElement.webkitRequestFullscreen) { /* Safari */
-                document.documentElement.webkitRequestFullscreen();
-            } else if (document.documentElement.msRequestFullscreen) { /* IE11 */
-                document.documentElement.msRequestFullscreen();
-            }
-        });
-    </script>
+    <div id="game-container">
+        <iframe src="https://www.classicube.net/play/" title="ClassiCube"></iframe>
+    </div>
 </body>
 </html>
+
