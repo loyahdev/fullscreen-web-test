@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Test</title>
+    <title>Scroll to Fullscreen Button</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: 200vh; /* Double the viewport height */
             background-color: #333;
             color: white;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #spacer {
+            height: 180vh; /* Spacer to push the button further down */
         }
         #fullscreen-btn {
             padding: 10px 20px;
@@ -28,6 +32,7 @@
     </style>
 </head>
 <body>
+    <div id="spacer"></div>
     <button id="fullscreen-btn">Go Fullscreen</button>
 
     <script>
