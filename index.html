@@ -3,40 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClassiCube on Apple Watch</title>
+    <title>ClassiCube Fullscreen</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            height: 110vh; /* Slightly more than the viewport height */
-            background-color: #333;
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-        #spacer {
-            height: 10vh; /* Spacer to push the iframe slightly down */
-        }
-        #game-container {
             width: 100%;
             height: 100%;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #333;
         }
         iframe {
             width: 100%;
-            height: 90vh; /* Adjust based on the desired height, leaving some margin for better visibility */
+            height: 100%;
             border: none;
         }
     </style>
 </head>
 <body>
-    <div id="spacer"></div>
-    <div id="game-container">
-        <iframe src="https://www.classicube.net/server/play/" title="ClassiCube"></iframe>
-    </div>
+    <iframe src="https://www.classicube.net/server/play/" title="ClassiCube"></iframe>
 </body>
 </html>
